@@ -25,8 +25,7 @@
            <button id="menu-toggle" 
             class="btn-menu" 
             aria-haspopup="dialog" 
-            aria-controls="roadmap-drawer" 
-            aria-label="Inhaltsverzeichnis öffnen">
+            aria-controls="roadmap-drawer">
             <span aria-hidden="true">📋</span> <span class="menu-text">Inhaltsverzeichnis</span>
             </button>
         </div>
@@ -42,7 +41,7 @@
       aria-labelledby="roadmap-title"
     >
       <div class="drawer-header">
-        <h2 id="roadmap-title">Roadmap-Navigation</h2>
+        <h2 id="roadmap-title">Navigation</h2>
         <button id="menu-close" class="btn-close" aria-label="Inhaltsverzeichnis schließen" autofocus>
         <span aria-hidden="true">&times;</span>
         </button>        
@@ -66,7 +65,7 @@
       <!-- Hero Section -->
       <section class="not-ready">
         <h1>
-          Barrierefreie Roadmap-Navigation
+          Barrierefreie Navigation
           <span class="highlight">mit Tastatursteuerung</span>
         </h1>
         <p>
@@ -78,11 +77,11 @@
 
       <section class="lesson-sidebar" aria-labelledby="roadmap-explanation">
         <h1 id="roadmap-explanation">
-          Vom Button zum <span class="highlight">barrierearmen Roadmap-Drawer</span>
+          Vom Button zum <span class="highlight">barrierearmen Inhaltsverzeichnis</span>
         </h1>
 
         <p>
-          Der Roadmap-Button öffnet ein seitlich einfahrendes
+          Der Inhaltsverzeichnis-Button öffnet ein seitlich einfahrendes
           Inhaltsverzeichnis, über das Besucher direkt zu den einzelnen
           Lektionen navigieren können.
         </p>
@@ -105,7 +104,7 @@
         <h2>1. HTML – Die semantische Grundlage</h2>
 
         <p>
-          Der Roadmap-Button ist ein echtes HTML-<code>button</code>-Element.
+          Der Inhaltsverzeichnis-Button ist ein echtes HTML-<code>button</code>-Element.
           Dadurch ist er von Haus aus mit der Tastatur bedienbar und wird von
           Screenreadern als Schaltfläche erkannt.
         </p>
@@ -159,7 +158,7 @@
         <p>JavaScript übernimmt die eigentliche Steuerung des Dialogs.</p>
 
         <p>
-          Beim Klick auf den Roadmap-Button wird zunächst geprüft, ob der Dialog
+          Beim Klick auf den Inhaltsverzeichnis-Button wird zunächst geprüft, ob der Dialog
           bereits geöffnet ist. Anschließend wird
           <code>showModal()</code> aufgerufen und der Zustand von
           <code>aria-expanded</code> auf <code>true</code> gesetzt.
@@ -241,7 +240,7 @@
           Wird der Dialog geschlossen, wird
           <code>aria-expanded</code> wieder auf <code>false</code> gesetzt.
           Zusätzlich sorgt die eigene Fokuslogik dafür, dass der Fokus zum
-          Roadmap-Button zurückkehrt, sofern er sich noch im Dialog befindet
+          Inhaltsverzeichnis-Button zurückkehrt, sofern er sich noch im Dialog befindet
           oder auf dem Dokument liegt.
         </p>
 
