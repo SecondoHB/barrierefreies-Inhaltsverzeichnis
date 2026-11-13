@@ -1,9 +1,9 @@
-# Roadmap-Drawer
+# Inhaltsverzeichnis
 
-Barrierearme Roadmap-Navigation mit Tastatursteuerung
-Vom Button zum barrierearmen Roadmap-Drawer
+Barrierearmes Inhaltsverzeichnis mit Tastatursteuerung
+Vom Button zum barrierearmen Inhaltsverzeichnis
 
-Der Roadmap-Button öffnet ein seitlich einfahrendes Inhaltsverzeichnis, über das Besucher direkt zu den einzelnen Lektionen navigieren können.
+Der Inhaltsverzeichnis-Button öffnet ein seitlich einfahrendes Inhaltsverzeichnis, über das Besucher direkt zu den einzelnen Lektionen navigieren können.
 
 Bei der Umsetzung wurde bewusst auf das native HTML-Element <dialog> zurückgegriffen. Anstatt ein eigenes Dialogsystem mit JavaScript nachzubauen, nutzen wir damit bereits vorhandene Funktionen des Browsers.
 
@@ -11,7 +11,7 @@ Das Dialogfenster wird mit der JavaScript-Methode showModal() geöffnet und mit 
 
 1. HTML – Die semantische Grundlage
 
-Der Roadmap-Button ist ein echtes HTML-<button>-Element. Dadurch ist er von Haus aus mit der Tastatur bedienbar und wird von Screenreadern als Schaltfläche erkannt.
+Der Inhaltsverzeichnis-Button ist ein echtes HTML-<button>-Element. Dadurch ist er von Haus aus mit der Tastatur bedienbar und wird von Screenreadern als Schaltfläche erkannt.
 
 Über aria-expanded wird zusätzlich der aktuelle Öffnungszustand vermittelt. aria-controls stellt eine Beziehung zwischen dem Button und dem zugehörigen Dialog her.
 
@@ -33,7 +33,7 @@ Für Menschen, die reduzierte Bewegung bevorzugen, berücksichtigt das CSS auße
 
 JavaScript übernimmt die eigentliche Steuerung des Dialogs.
 
-Beim Klick auf den Roadmap-Button wird zunächst geprüft, ob der Dialog bereits geöffnet ist. Anschließend wird showModal() aufgerufen und der Zustand von aria-expanded auf true gesetzt.
+Beim Klick auf den Inhaltsverzeichnis-Button wird zunächst geprüft, ob der Dialog bereits geöffnet ist. Anschließend wird showModal() aufgerufen und der Zustand von aria-expanded auf true gesetzt.
 
 Gezielte Fokussteuerung
 
@@ -59,7 +59,7 @@ Escape	Dialog schließen
 
 Bei der Navigation mit den Pfeiltasten wird am Ende der Liste wieder zum ersten Eintrag und umgekehrt gesprungen.
 
-Wird der Dialog geschlossen, wird aria-expanded wieder auf false gesetzt. Zusätzlich sorgt die eigene Fokuslogik dafür, dass der Fokus zum Roadmap-Button zurückkehrt, sofern er sich noch im Dialog befindet oder auf dem Dokument liegt.
+Wird der Dialog geschlossen, wird aria-expanded wieder auf false gesetzt. Zusätzlich sorgt die eigene Fokuslogik dafür, dass der Fokus zum Inhaltsverzeichnis-Button zurückkehrt, sofern er sich noch im Dialog befindet oder auf dem Dokument liegt.
 
 4. Warum diese Umsetzung barriereärmer ist
 
