@@ -111,12 +111,6 @@
         </p>
 
         <p>
-          Über <code>aria-expanded</code> wird zusätzlich der aktuelle
-          Öffnungszustand vermittelt. <code>aria-controls</code> stellt eine
-          Beziehung zwischen dem Button und dem zugehörigen Dialog her.
-        </p>
-
-        <p>
           Das Inhaltsverzeichnis selbst wird mit
           <code>&lt;dialog&gt;</code> umgesetzt. Innerhalb des Dialogs sorgt ein
           <code>&lt;nav&gt;</code>-Element mit einer ungeordneten Liste aus
@@ -159,10 +153,7 @@
         <p>JavaScript übernimmt die eigentliche Steuerung des Dialogs.</p>
 
         <p>
-          Beim Klick auf den Inhaltsverzeichnis-Button wird zunächst geprüft, ob der Dialog
-          bereits geöffnet ist. Anschließend wird
-          <code>showModal()</code> aufgerufen und der Zustand von
-          <code>aria-expanded</code> auf <code>true</code> gesetzt.
+          Beim Klick auf den Inhaltsverzeichnis-Button wird <code>showModal()</code> aufgerufen.
         </p>
 
         <p>Nach dem Öffnen wird der Fokus gezielt gesetzt:</p>
@@ -238,9 +229,7 @@
         </p>
 
         <p>
-          Wird der Dialog geschlossen, wird
-          <code>aria-expanded</code> wieder auf <code>false</code> gesetzt.
-          Zusätzlich sorgt die eigene Fokuslogik dafür, dass der Fokus zum
+          Wird der Dialog geschlossen, sorgt die eigene Fokuslogik dafür, dass der Fokus zum
           Inhaltsverzeichnis-Button zurückkehrt, sofern er sich noch im Dialog befindet
           oder auf dem Dokument liegt.
         </p>
@@ -258,7 +247,6 @@
         <ul class="lesson-list">
           <li>Native HTML-Elemente statt selbstgebauter Bedienelemente.</li>
           <li>Aussagekräftige Beschriftungen über <code>aria-label</code>.</li>
-          <li>Zustandsinformationen über <code>aria-expanded</code>.</li>
           <li>
             Eine nachvollziehbare Beziehung zwischen Button und Dialog über
             <code>aria-controls</code>.
