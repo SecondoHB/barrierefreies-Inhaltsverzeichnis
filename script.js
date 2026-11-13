@@ -44,7 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
       );
 
       drawer.showModal();
-      menuToggle.setAttribute('aria-expanded', 'true');
+      //menuToggle.setAttribute('aria-expanded', 'true');
+      // entfernt, weil in der index.html 
+      // aria-haspopup="dialog" das "aria-expanded" ersetzt hat 
 
       requestAnimationFrame(() => {
         if (activeLink) {
@@ -67,7 +69,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Fokus nach dem Schließen zurückgeben (Barrierefreiheit)
     drawer.addEventListener('close', () => {
-      menuToggle.setAttribute('aria-expanded', 'false');
+      
+      // menuToggle.setAttribute('aria-expanded', 'false');      
+      // entfernt, weil in der index.html 
+      // aria-haspopup="dialog" das "aria-expanded" ersetzt hat 
 
       // Fokus nur zurückgeben, wenn der Fokus noch im Dialog liegt
       if (
